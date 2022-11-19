@@ -16,4 +16,6 @@ import com.shahry.local.model.PostLocalModel
 )
 abstract class AppDatabase : RoomDatabase() {
 
+    abstract fun authorDao() : AuthorDAO
+    abstract fun postDao() : PostDAO
 }
