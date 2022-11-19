@@ -1,7 +1,7 @@
 package com.shahry.data.model
 
 data class AuthorDTO(
-    val id: String,
+    val id: Int,
     val name: String,
     val userName: String,
     val email: String,
