@@ -23,14 +23,14 @@ class RepositoryImp @Inject constructor(
                 // Get data from RemoteDataSource
                 val data = remoteDataSource.getAuthors()
                 // Save to local or update if exist
-                localDataSource.addAuthor(data)
+                localDataSource.addAllAuthor(data)
                 // Emit data
                 emit(Resource.Success(authorMapper.fromList(data)))
             } catch (ex : Exception) {
                 // If remote request fails
                 try {
                     // Get data from LocalDataSource
-                    val local = localDataSource.getAuthors()
+                    val local = localDataSource.getAllAuthors()
                     // Emit data
                     emit(Resource.Success(authorMapper.fromList(local)))
                 } catch (ex1 : Exception) {
