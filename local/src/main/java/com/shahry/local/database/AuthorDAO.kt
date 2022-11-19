@@ -7,7 +7,7 @@ import androidx.room.Query
 import com.shahry.local.model.AuthorLocalModel
 
 @Dao
-interface AuthorDao {
+interface AuthorDAO {
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun addAllAuthors(authors : List<AuthorLocalModel>): List<Long>
