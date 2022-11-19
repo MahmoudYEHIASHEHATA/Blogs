@@ -8,9 +8,9 @@ import com.shahry.data.model.PostDTO
  */
 interface LocalDataSource {
 
-    suspend fun addAuthor(authors: List<AuthorDTO>) : List<Long>
+    suspend fun addAllAuthor(authors: List<AuthorDTO>) : List<Long>
 
-    suspend fun getAuthors() : List<AuthorDTO>
+    suspend fun getAllAuthors() : List<AuthorDTO>
 
     suspend fun addPosts(posts : List<PostDTO>) : List<Long>
 
