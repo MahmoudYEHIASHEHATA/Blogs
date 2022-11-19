@@ -6,4 +6,5 @@ data class PostEntity(
     val title: String,
     val body: String,
     val imageUrl: String,
+    val authorId : Int
 )

@@ -12,7 +12,8 @@ class PostDataDomainMapper @Inject constructor(): Mapper<PostDTO,PostEntity> {
             date = i?.date ?: "",
             title = i?.title ?: "",
             body = i?.body ?: "",
-            imageUrl = i?.imageUrl ?: ""
+            imageUrl = i?.imageUrl ?: "",
+            authorId = i?.authorId ?: -1
         )
     }
 
@@ -22,7 +23,8 @@ class PostDataDomainMapper @Inject constructor(): Mapper<PostDTO,PostEntity> {
             date = o?.date ?: "",
             title = o?.title ?: "",
             body = o?.body ?: "",
-            imageUrl = o?.imageUrl ?: ""
+            imageUrl = o?.imageUrl ?: "",
+            authorId = o?.authorId ?: -1
         )
     }
 }
