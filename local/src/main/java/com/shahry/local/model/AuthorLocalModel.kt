@@ -6,11 +6,11 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "author")
 data class AuthorLocalModel(
     @PrimaryKey
-    val id: Int,
-    val name: String,
-    val userName: String,
-    val email: String,
-    val avatarUrl: String,
-    val lat: String,
-    val long: String
+    var id: Int =-1,
+    var name: String ="",
+    var userName: String = "",
+    var email: String = "",
+    var avatarUrl: String = "",
+    var lat: String ="",
+    var long: String=""
 )

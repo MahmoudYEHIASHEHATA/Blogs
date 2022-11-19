@@ -17,9 +17,9 @@ import javax.inject.Inject
 class GetAuthorPostsUseCase @Inject constructor(
     private val repository: Repository,
     @IoDispatcher private val dispatcher: CoroutineDispatcher
-): BaseUseCase<List<PostEntity>,String>() {
+): BaseUseCase<List<PostEntity>,Int>() {
 
-    override suspend fun buildRequest(params: String?): Flow<Resource<List<PostEntity>>> {
+    override suspend fun buildRequest(params: Int?): Flow<Resource<List<PostEntity>>> {
 
         if (params == null) {
             return flow {
