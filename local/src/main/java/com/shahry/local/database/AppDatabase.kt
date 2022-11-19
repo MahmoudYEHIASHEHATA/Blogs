@@ -7,8 +7,8 @@ import com.shahry.local.model.PostLocalModel
 
 @Database(
     entities = [
-        AuthorLocalModel::class,
-        PostLocalModel::class
+        PostLocalModel::class,
+        AuthorLocalModel::class
     ],
     version = DatabaseConstants.databaseVersion,
     // Enable export database schema to allow $[androidx.room.AutoMigration] in the next database versions
@@ -16,6 +16,6 @@ import com.shahry.local.model.PostLocalModel
 )
 abstract class AppDatabase : RoomDatabase() {
 
-    abstract fun authorDao() : AuthorDAO
-    abstract fun postDao() : PostDAO
+    abstract fun authorDao(): AuthorDAO
+    abstract fun postDao(): PostDAO
 }
