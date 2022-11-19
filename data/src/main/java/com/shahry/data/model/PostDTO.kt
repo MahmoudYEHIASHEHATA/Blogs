@@ -1,6 +1,6 @@
-package com.shahry.domain.entity
+package com.shahry.data.model
 
-data class PostEntity(
+data class PostDTO(
     val id: Int,
     val date: String,
     val title: String,

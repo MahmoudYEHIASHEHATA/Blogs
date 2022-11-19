@@ -1,6 +1,6 @@
-package com.shahry.domain.entity
+package com.shahry.data.model
 
-data class AuthorEntity(
+data class AuthorDTO(
     val id: Int,
     val name: String,
     val userName: String,
@@ -8,4 +8,4 @@ data class AuthorEntity(
     val avatarUrl: String,
     val lat: String,
     val long: String
-    )
+)

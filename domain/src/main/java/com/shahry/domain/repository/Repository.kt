@@ -12,5 +12,5 @@ interface Repository {
 
     suspend fun getAuthors(): Flow<Resource<List<AuthorEntity>>>
 
-    suspend fun getAuthorPosts(authorId: String): Flow<Resource<List<PostEntity>>>
+    suspend fun getAuthorPosts(authorId: Int): Flow<Resource<List<PostEntity>>>
 }
