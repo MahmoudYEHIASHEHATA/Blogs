@@ -10,6 +10,13 @@ ext {
     okhttpVersion = "4.9.0"
     fragment_ktx = '1.5.4'
     recyclerView = '1.2.1'
+    constraintlayout = '2.1.4'
+    material = "1.8.0-alpha02"
+    navComponentVersion = "2.5.3"
+    lifecycle_viewmodel = '2.4.0-alpha02'
+    leakCanary = "2.4"
+    lifecycle_livedata_ktx = '2.6.0-alpha03'
+    lifecycle_runtime = "2.4.0-alpha02"
     // Test Dependencies
     junitVersion = "4.13.2"
     coreTestingVersion = "2.1.0"

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <data>
+
+        <variable
+            name="author"
+            type="com.shahry.feature.model.AuthorUiModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/spacing_generic">
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/spacing_generic"
+            app:cardBackgroundColor="@color/white_opacity"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/spacing_generic">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/author_image_view"
+                    imageURL="@{author.avatarUrl}"
+                    android:layout_width="@dimen/dimen_45"
+                    android:layout_height="@dimen/dimen_45"
+                    android:layout_marginStart="@dimen/dimen_20"
+                    android:layout_marginTop="@dimen/dimen_20"
+                    android:contentDescription="@string/author_avt"
+                    android:src="@drawable/ic_avt"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/author_name_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_generic"
+                    android:layout_marginEnd="@dimen/spacing_generic"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_18"
+                    app:layout_constraintStart_toEndOf="@id/author_image_view"
+                    app:layout_constraintTop_toTopOf="@+id/author_image_view"
+                    tools:text="author name" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/author_email_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_generic"
+                    android:layout_marginTop="@dimen/spacing_generic"
+                    android:layout_marginEnd="@dimen/spacing_generic"
+                    android:textColor="@color/gray_light"
+                    android:textSize="@dimen/font_18"
+                    app:layout_constraintStart_toEndOf="@id/author_image_view"
+                    app:layout_constraintTop_toBottomOf="@id/author_name_view"
+                    tools:text="author name" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
