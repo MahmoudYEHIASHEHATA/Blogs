@@ -72,6 +72,9 @@ dependencies {
     implementation "com.google.dagger:hilt-android:$hilt_version"
     kapt "com.google.dagger:hilt-android-compiler:$hilt_version"
 
+    // circleImageView
+    implementation 'de.hdodenhof:circleimageview:3.0.1'
+
     // Test
     testImplementation "junit:junit:$junitVersion"
     // testImplementation for pure JVM unit tests
