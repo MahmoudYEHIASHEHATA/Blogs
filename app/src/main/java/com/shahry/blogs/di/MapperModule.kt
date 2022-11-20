@@ -7,6 +7,10 @@ import com.shahry.data.model.AuthorDTO
 import com.shahry.data.model.PostDTO
 import com.shahry.domain.entity.AuthorEntity
 import com.shahry.domain.entity.PostEntity
+import com.shahry.feature.mapper.AuthorDomainUiMapper
+import com.shahry.feature.mapper.PostDomainUiMapper
+import com.shahry.feature.model.AuthorUiModel
+import com.shahry.feature.model.PostUiModel
 import com.shahry.local.mapper.AuthorLocalDataMapper
 import com.shahry.local.mapper.PostLocalDataMapper
 import com.shahry.local.model.AuthorLocalModel
@@ -44,8 +48,17 @@ abstract class MapperModule {
     abstract fun bindsPostDataDomainMapper(mapper : PostDataDomainMapper) : Mapper<PostDTO, PostEntity>
     //endregion
 
+    //region Presentation Mappers
+    @Binds
+    abstract fun bindsAuthorDomainUiMapper(mapper : AuthorDomainUiMapper) : Mapper<AuthorEntity, AuthorUiModel>
+
+    @Binds
+    abstract fun bindsPostDomainUiMapper(mapper : PostDomainUiMapper) : Mapper<PostEntity, PostUiModel>
+    //endregion
+
 
     //region Remote Mappers
+
     @Binds
     abstract fun bindsAuthorNetworkDataMapper(mapper: AuthorNetworkDataMapper): Mapper<AuthorResponseNetwork, AuthorDTO>
 
