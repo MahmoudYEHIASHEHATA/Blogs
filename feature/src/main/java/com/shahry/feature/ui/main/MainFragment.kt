@@ -31,7 +31,7 @@ class MainFragment : BaseFragment<FragmentMainBinding>() {
     override fun prepareView(savedInstanceState: Bundle?) {
         binding.rvAuthor.adapter = adapter
         viewModel.setEvent(MainContract.Event.OnFetchAuthors)
-
+        initObservers()
     }
 
     /**
