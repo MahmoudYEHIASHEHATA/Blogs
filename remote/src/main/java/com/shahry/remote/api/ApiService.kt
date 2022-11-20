@@ -7,7 +7,7 @@ import retrofit2.http.Query
 
 interface ApiService {
 
-    @GET("author")
+    @GET("authors")
     suspend fun getAuthors(): List<AuthorResponseNetwork>
 
     @GET("posts")

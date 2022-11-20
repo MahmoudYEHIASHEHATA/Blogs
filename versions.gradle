@@ -1,4 +1,5 @@
 ext {
+    targetSdk = 33
 
     appcompat = '1.5.1'
     ktx = '1.9.0'

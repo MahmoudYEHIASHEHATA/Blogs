@@ -9,12 +9,12 @@ plugins {
 }
 
 android {
-    compileSdk 32
+    compileSdk 33
 
     defaultConfig {
         applicationId "com.shahry.blogs"
         minSdk 23
-        targetSdk 32
+        targetSdk rootProject.ext.targetSdk
         versionCode 1
         versionName "1.0"
 
