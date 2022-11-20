@@ -5,5 +5,7 @@ data class AuthorUiModel(
     val name: String,
     val userName: String,
     val email: String,
-    val avatarUrl: String
+    val avatarUrl: String,
+    val lat: String,
+    val long: String
 )
