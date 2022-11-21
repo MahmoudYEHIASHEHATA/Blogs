@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="post"
+            type="com.shahry.feature.model.PostUiModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/spacing_tiny">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/crd_author"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            app:cardUseCompatPadding="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/post_title_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_generic"
+                    android:layout_marginTop="@dimen/spacing_generic"
+                    android:layout_marginEnd="@dimen/spacing_generic"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/font_18"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="@{post.title , default=`Shahry`}" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/post_date_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_med"
+                    android:layout_marginEnd="@dimen/spacing_generic"
+                    android:textColor="@color/gray_light"
+                    android:textSize="@dimen/font_10"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/post_title_view"
+                    tools:text="@{post.date , default=`23/4/2022`}" />
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/post_body_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/spacing_large"
+                    android:layout_marginTop="@dimen/spacing_generic"
+                    android:layout_marginEnd="@dimen/spacing_generic"
+                    android:textColor="@color/gray_light"
+                    android:textSize="@dimen/font_14"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/post_date_view"
+                    tools:text="@{post.body , default=`Shahry`}" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    imageURL="@{post.imageUrl}"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/post_img_height"
+                    android:layout_margin="@dimen/spacing_generic"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/post_body_view" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

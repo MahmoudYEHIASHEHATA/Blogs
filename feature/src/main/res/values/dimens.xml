@@ -2,6 +2,7 @@
 <resources>
 
     <dimen name="spacing_generic">8dp</dimen>
+    <dimen name="spacing_med">12dp</dimen>
     <dimen name="spacing_large">18dp</dimen>
     <dimen name="spacing_xlarge">35dp</dimen>
     <dimen name="spacing_tiny">4dp</dimen>
@@ -20,4 +21,7 @@
     <dimen name="font_24">24sp</dimen>
     <dimen name="font_32">32sp</dimen>
     <dimen name="font_20">20sp</dimen>
+
+    <!--image-->
+    <dimen name="post_img_height">200dp</dimen>
 </resources>
