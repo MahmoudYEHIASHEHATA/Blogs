@@ -13,7 +13,7 @@ ext {
     recyclerView = '1.2.1'
     constraintlayout = '2.1.4'
     material = "1.8.0-alpha02"
-    navComponentVersion = "2.5.3"
+    navComponentVersion = "2.3.5"
     lifecycle_viewmodel = '2.4.0-alpha02'
     leakCanary = "2.4"
     lifecycle_livedata_ktx = '2.6.0-alpha03'

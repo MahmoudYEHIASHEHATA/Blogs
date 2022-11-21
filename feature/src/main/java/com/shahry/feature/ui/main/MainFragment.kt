@@ -8,6 +8,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
+import androidx.navigation.fragment.findNavController
 import com.shahry.base.BaseFragment
 import com.shahry.feature.core.showErrorDialog
 import com.shahry.feature.databinding.FragmentMainBinding
@@ -21,7 +22,9 @@ class MainFragment : BaseFragment<FragmentMainBinding>() {
 
     private val viewModel: MainViewModel by viewModels()
     private val adapter: AuthorAdapter by lazy {
-        AuthorAdapter {
+        AuthorAdapter { author->
+            val action = MainFragmentDirections.actionMainFragmentToDetailFragment(author)
+            findNavController().navigate(action)
         }
     }
 
