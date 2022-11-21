@@ -129,11 +129,9 @@
                     tools:listitem="@layout/row_post_item_layout" />
 
                 <ProgressBar
-                    android:id="@+id/progress_bar_comics"
-                    style="?android:attr/progressBarStyle"
+                    android:id="@+id/loading_pb"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:indeterminateTint="@color/white"
                     app:layout_constraintBottom_toBottomOf="@+id/rv_posts"
                     app:layout_constraintEnd_toEndOf="@+id/rv_posts"
                     app:layout_constraintStart_toStartOf="@+id/rv_posts"
