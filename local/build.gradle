@@ -14,7 +14,7 @@ android {
         minSdk 23
         targetSdk rootProject.ext.targetSdk
 
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "com.shahry.local.utils.HiltTestRunner"
         consumerProguardFiles "consumer-rules.pro"
 
 
