@@ -1,5 +1,6 @@
 package com.shahry.feature.ui.detail
 
+import android.location.Geocoder
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -17,6 +18,7 @@ import com.shahry.feature.ui.main.PostAdapter
 import com.shahry.feature.ui.vm.DetailViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
+import java.io.IOException
 
 @AndroidEntryPoint
 class DetailFragment : BaseFragment<FragmentDetailBinding>() {
@@ -38,7 +40,25 @@ class DetailFragment : BaseFragment<FragmentDetailBinding>() {
         args.detail?.let { author ->
             binding.author = author
             authorId = author.id
+            binding.toolBarLayout.title = author.name
+
+            var isShow = true
+            var scrollRange = -1
+            binding.appBarLayout.addOnOffsetChangedListener { barLayout, verticalOffset ->
+                if (scrollRange == -1) {
+                    scrollRange = barLayout?.totalScrollRange!!
+                }
+                if (scrollRange + verticalOffset == 0) {
+                    binding.collapsingToolbar.title = author.name
+                    isShow = true
+                } else if (isShow) {
+                    binding.collapsingToolbar.title =
+                        " " //careful there should a space between double quote otherwise it wont work
+                    isShow = false
+                }
+            }
         }
+
 
         viewModel.setEvent(DetailContract.Event.OnFetchPosts(authorId))
 

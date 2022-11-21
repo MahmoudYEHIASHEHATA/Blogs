@@ -32,7 +32,7 @@
 
                 <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/post_title_view"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/spacing_generic"
                     android:layout_marginTop="@dimen/spacing_generic"
@@ -59,7 +59,7 @@
 
                 <com.google.android.material.textview.MaterialTextView
                     android:id="@+id/post_body_view"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="@dimen/spacing_large"
                     android:layout_marginTop="@dimen/spacing_generic"
@@ -75,8 +75,11 @@
                     imageURL="@{post.imageUrl}"
                     android:layout_width="match_parent"
                     android:layout_height="@dimen/post_img_height"
+                    android:scaleType="fitXY"
                     android:layout_margin="@dimen/spacing_generic"
+                    android:layout_marginBottom="@dimen/spacing_generic"
                     app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/post_body_view" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </com.google.android.material.card.MaterialCardView>
