@@ -40,8 +40,12 @@ They're different tools with different strengths. Like a tank and a cannon, they
  - Costing of create coroutines are much cheaper to crate threads.
  - Don't be over engineered to use observable pattern, when no need to use it.
  - parent coroutine can automatically manage the life cycle of its child coroutines for you.
+ 
+ # Features 🎨
+- list of the author's name and image.
+- Display the description, posts and detail of the author that the user select.
 
-### Modules
+### Modules 🚧
 Modules are the collection of source files and build settings that allow you to divide your project into discrete units of functionality.
 
 - **App Module**
@@ -78,7 +82,7 @@ Modules are the collection of source files and build settings that allow you to 
 
 Each module has its own test.
 
-### Tech Stack
+### Tech Stack 🔨
 - [Kotlin](https://kotlinlang.org)
 - [Jetpack](https://developer.android.com/jetpack)
 	* [Android KTX](https://developer.android.com/kotlin/ktx)
