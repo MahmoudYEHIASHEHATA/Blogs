@@ -108,5 +108,3 @@ Each module has its own test.
     * [Coroutine Test](https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-test)
     * [Barista](https://github.com/AdevintaSpain/Barista)
     * [Dagger Hilt Testing](https://developer.android.com/training/dependency-injection/hilt-testing)
-
-### Contributions
