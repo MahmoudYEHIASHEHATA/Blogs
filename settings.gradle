@@ -14,3 +14,10 @@ dependencyResolutionManagement {
 }
 rootProject.name = "blogs"
 include ':app'
+include ':common'
+include ':local'
+include ':data'
+include ':domain'
+include ':remote'
+include ':base'
+include ':feature'
